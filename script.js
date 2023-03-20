@@ -111,6 +111,7 @@ const start = () => {
 
     // finished timer
     if (count == 0) {
+      
       // -------------- START TYPING -----------------
       document.addEventListener("keydown", typeController);
       countdownOverlay.style.display = "flex";
@@ -118,6 +119,7 @@ const start = () => {
 
       clearInterval(startCountdown);
       startTime = new Date().getTime();
+      document.getElementById("countdown").style.display = "none";
     }
     count--;
   }, 1000);
